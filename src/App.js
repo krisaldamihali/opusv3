@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className='row'>
+      <div className='column'>
+        <h1>hallo</h1>
+      </div>
+    
+      <div className='column'>
+        <form action="/action_page.php">
+          <input type="checkbox" id="agecheck" name="agecheck" value="Age" />
+          <label for="vehicle1"> I am over the age of 14</label>
+
+
+          <button
+            type="button"
+            onClick={(e) => {
+            e.preventDefault();
+            window.location.href='http://google.com';
+            }}
+            > Sign Up
+          </button>
+
+
+          <button
+            type="button"
+            onClick={(e) => {
+            e.preventDefault();
+            window.location.href='http://google.com';
+            }}
+            > Sign In
+          </button>
+
+
+        </form>
+      </div>
+      <div className='column'>
+        <h1>hallo agian</h1>
+      </div>
     </div>
-  );
+  );  
 }
 
 export default App;
