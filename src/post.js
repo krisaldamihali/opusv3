@@ -1,15 +1,40 @@
-import { logDOM } from '@testing-library/react';
-import React from 'react';
 import './App.css';
 import './styles.css'
+import { useState } from 'react'
 
 import hand from "./hands.png"
+import {AiFillCloseCircle} from "react-icons/ai";
+import { FaRegClosedCaptioning } from 'react-icons/fa';
 
-const Post = ()=>{
+
+const Post = (props)=>{
+    const [showDescription, setShowDescription] = useState(false)
+    const showText=()=>{
+        setShowDescription(true)
+
+    }
+    const removeText= () =>{
+        setShowDescription(false)
+    }
+
     return(
         <div>
-            <div>
-                <img className ="picture" src={hand}/> <p>developp with us</p>
+            <div className='postDiv'>
+                <h1 className= "text-big">{props.anouncement}</h1>
+                <img className ="picture" src={props.pic}/> <p className = 'text small'> {props.description}</p>
+                <button onClick={showText}>{props.input}</button>
+                {
+                    showDescription && ( 
+                        <div>
+
+                            <p> More text here blah blah </p>
+                            <button onClick={removeText}>
+                                <AiFillCloseCircle size={30}/>
+                            </button>
+                        </div>
+                )}
+                
+                
             </div>
 
         </div>

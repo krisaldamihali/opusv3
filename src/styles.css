@@ -4,3 +4,10 @@
     width: 50px;
 
 }
+
+.postDiv{
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}

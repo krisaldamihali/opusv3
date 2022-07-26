@@ -1,0 +1,34 @@
+
+html, body, main {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  main, header, section {
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+  }
+  
+  section {
+    display: flex;
+    flex: 1;
+  }
+  
+  section div {
+    width: 50%;
+    background-color: yellow;
+  }
