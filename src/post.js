@@ -1,6 +1,9 @@
 import './App.css';
 import './styles.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { getDatabase, ref, onValue, set } from "firebase/database";
+import { app } from './firebase_config.js';
+
 
 import hand from "./hands.png"
 import {AiFillCloseCircle} from "react-icons/ai";
@@ -27,7 +30,7 @@ const Post = (props)=>{
                     showDescription && ( 
                         <div>
 
-                            <p> More text here blah blah </p>
+                            <p> {props.fullDescription} </p>
                             <button onClick={removeText}>
                                 <AiFillCloseCircle size={30}/>
                             </button>
