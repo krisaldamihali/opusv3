@@ -5,6 +5,7 @@
     position: sticky;
     top: 0;
     cursor: pointer;
+    background-color: #90e8d6;
   }
   
   .background {
@@ -21,8 +22,9 @@
   .footer {
     height: 100%;
     background-color: #000;
+    padding-bottom: 5px;
+    
   }
-  
   .nav-list {
     width: 70%;
     display: flex;
@@ -179,21 +181,59 @@
   }
   .button {
     margin-right: 50px;
-    font-size: 15px;
+    font-size: 25px;
+    color:#08705b;
+    font-family:Impact;
+    border-radius: 10%;
 
   }
   .buttonAdd {
-    margin-left: 500px;
-    font-size: 15px;
+    margin-left: 400px;
+    font-size: 25px;
+    font-family:'Franklin Gothic Medium';
+    color:#d4220b;
+    border-radius: 10%;
+    float: right;
+    
   
   }
   .buttonAddPost {
-    margin-left: 500px;
-    font-size: 20px;
+    display:block; 
+    margin: 0 auto;
+    font-size: 50px;
+    font-family:ARIAL BLACK;
+    color:#fc0707;
+    border-radius: 10%;
+    margin-top: 30px;
+    
   
   }
+  .h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 100px;
+    color:#d4550b;
   
+  }
+  .h2 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 50px;
+    color:#1a0335;
   
+  }
+  .h3 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
   
+  }
+  .back {
+    font-size: 30px;
+    font-family:ARIAL BLACK;
+    color:#1a0335;
+    border-radius: 10%;
+  }
   
   

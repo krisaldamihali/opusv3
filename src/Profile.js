@@ -14,7 +14,14 @@ function Profile(props) {
     return (
         <div>
             <nav class="navbar background">
-                <div class="logo">
+                {/* <div>
+                    <BrowserRouter>
+                    <button className='back'>
+                        Back
+                    </button>
+                    </BrowserRouter>
+               </div> */}
+               <div class="logo">
                     <img src={hands}/>
                 </div>
                 <div className="rightNav">
@@ -29,12 +36,9 @@ function Profile(props) {
                         <li><div onClick={()=>{alert('clicked')}}><MdNotifications size ={35} /></div></li>
                     </ul>
                 </div>
+               
             </nav>
-            <BrowserRouter>
-                <button>
-                    Back
-                </button>
-            </BrowserRouter>
+            
             <div className='wrapper'>
                 
                 <div >
@@ -46,16 +50,16 @@ function Profile(props) {
                 
                 </div>
                 <div >
-                    <h1>
+                    <h1 className='h1'>
                     John Smith 
                     </h1>
-                    <h2>
+                    <h2 className='h2'>
                     Description:
                     </h2>
-                    <h3>
+                    <h3 className='h3'>
                     Sponsorship is a business relationship between a provider of funds, resources, or services and an individual, event, or organization which offers in return some rights and associations that may be used for commercial advantage.                  
                     </h3>
-                    <h2>
+                    <h2 className='h2'>
                     Tags:
                     </h2>
                     <button button disabled={true} className='button'>
@@ -70,7 +74,7 @@ function Profile(props) {
                     <button className="buttonAdd">
                     Add Tags
                     </button>
-                    <h2>
+                    <h2 className='h2'>
                     Skills:
                     </h2>
                     <button disabled={true} className='button'>
@@ -85,10 +89,14 @@ function Profile(props) {
                     <button  className="buttonAdd">
                     Add Skills
                     </button>
+                    <div>
+                        <button  className="buttonAddPost">
+                        Add Post
+                    </button>
+                    </div>
                 </div>
-                <button  className="buttonAddPost">
-                    Add Post
-            </button>
+              
+                
             </div>  
             <footer className="footer">
                 <p className="text-footer">

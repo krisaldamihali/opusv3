@@ -8,7 +8,8 @@ import Profile from "./Profile.js"
 
 function App() {
   return (
-    <div>
+    <div  style={{
+      backgroundColor: '#a6eddf',  }}>
     <Profile/>
     
     </div>
@@ -16,3 +17,6 @@ function App() {
 }
 
 export default App;
+
+
+
