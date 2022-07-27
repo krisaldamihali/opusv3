@@ -10,8 +10,12 @@ import Post from "./post.js"
 import { useState, useEffect } from 'react'
 import { getDatabase, ref, onValue, set } from "firebase/database";
 import { app } from './firebase_config.js';
+import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+import AddPosts from  "./addPost.js"
+
 
 function HomePg(props) {
+
     const [posts, setPosts] = useState([])
     const [description, setDescription] = useState("")
     const [fullDescription, setFullDescription] = useState("")
@@ -53,24 +57,31 @@ function HomePg(props) {
 
     return (
         <div>
-
-            <nav class="navbar background">
-                <div class="logo">
+            <nav className="navbar background">
+                <div className="logo">
                     <img src={hands}/>
                 </div>
                 <div className="rightNav">
                     <input type="text" name="search" id="search" />
-                    <button class="btn btn-sm">Search</button>
+                    <button className="btn btn-sm">Search</button>
                 </div>
                 <div className='icons'>
-                    <ul class="nav-list">
-                        <li><div onClick={()=>{alert('profile')}}><FaRegUserCircle size={35} /></div></li>
-                        <li><div onClick={()=>{alert('clicked')}}><FiSettings size ={35} /></div></li>
-                        <li><div onClick={()=>{alert('clicked')}}><BsFillChatDotsFill size ={35}/></div></li>
+                    <ul className="nav-list">
+                        <li><div onClick={()=>{alert('profile')}}><FaRegUserCircle size={35} /></div>
+
+                        </li>
+                        <li><div onClick={()=>{alert('clicked')}}><FiSettings size ={35} /></div>
+
+                        </li>
+                        <li><div onClick={()=>{alert('clicked')}}><BsFillChatDotsFill size ={35}/></div>
+
+                        </li>
+                                
                         <li><div onClick={()=>{alert('clicked')}}><MdNotifications size ={35} /></div></li>
                     </ul>
                 </div>
             </nav>
+
     <form onSubmit={() => writePost(posts.length + 1, description,fullDescription ,picture, title)}>
         <div>
           <label>
@@ -104,7 +115,7 @@ function HomePg(props) {
 
             {posts.map(
                 post => (
-                        <section class="section">
+                        <section className="section">
                             <Post pic= {post.picture}  anouncement ={post.title} description ={post.description} input = "apply" fullDescription={post.fullDescription}/>
                         </section>
 
