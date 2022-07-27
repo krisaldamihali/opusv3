@@ -13,8 +13,12 @@ import { app } from './firebase_config.js';
 
 function HomePg(props) {
     const [posts, setPosts] = useState([])
-    const [content, setContent] = useState("")
-    const [imgsrc, setImgSrc] = useState("")
+    const [description, setDescription] = useState("")
+    const [fullDescription, setFullDescription] = useState("")
+    const [picture, setPicture] = useState("")
+    const [title, setTitle] = useState("")
+
+
 
     const readPosts = () => {
         const db = getDatabase(app);
@@ -36,8 +40,20 @@ function HomePg(props) {
         readPosts()
       }, [])
 
+
+      const writePost = (postId, descripton , fullDescription, picture, title) => {
+        const db = getDatabase(app);
+        set(ref(db, 'posts/' + postId), {
+          description: description,
+          fullDescription: fullDescription,
+          picture:picture,
+          title:title
+        });
+      }
+
     return (
         <div>
+
             <nav class="navbar background">
                 <div class="logo">
                     <img src={hands}/>
@@ -55,6 +71,35 @@ function HomePg(props) {
                     </ul>
                 </div>
             </nav>
+    <form onSubmit={() => writePost(posts.length + 1, description,fullDescription ,picture, title)}>
+        <div>
+          <label>
+            Title:
+            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
+          </label>
+        </div>
+        <div>
+          <label>
+            Description:
+            <input type="text" value={description} onChange={(event) => setDescription(event.target.value)} />
+          </label>
+        </div>
+        <div>
+          <label>
+            Full description:
+            <input type="text" value={fullDescription} onChange={(event) => setFullDescription(event.target.value)} />
+          </label>
+        </div>
+        <div>
+          <label>
+            Image Source:
+            <input type="text" value={picture} onChange={(event) => setPicture(event.target.value)} />
+          </label>
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+    </form>
             <div className = "wrapper">
 
             {posts.map(
