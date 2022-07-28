@@ -21,9 +21,8 @@ const Post = (props)=>{
     }
 
     return(
-        <div>
             <div className='postDiv'>
-                <h1 className= "text-big">{props.anouncement}</h1>
+                <h1 className= "header">{props.anouncement}</h1>
                 <img className ="picture" src={props.pic}/> <p className = 'text small'> {props.description}</p>
                 <button onClick={showText}>{props.input}</button>
                 {
@@ -39,8 +38,6 @@ const Post = (props)=>{
                 
                 
             </div>
-
-        </div>
     )
 }
 export default Post

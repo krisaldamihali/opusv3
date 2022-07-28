@@ -10,9 +10,8 @@ import Post from "./post.js"
 import { useState, useEffect } from 'react'
 import { getDatabase, ref, onValue, set } from "firebase/database";
 import { app } from './firebase_config.js';
-import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import HomePg from "./home.js"
-
 
 
 function AddPosts(props) {
@@ -58,30 +57,7 @@ function AddPosts(props) {
 
     return (
         <div>
-            <nav className="navbar background">
-                <div className="logo">
-                    <img src={hands}/>
-                </div>
-                <div className="rightNav">
-                    <input type="text" name="search" id="search" />
-                    <button className="btn btn-sm">Search</button>
-                </div>
-                <div className='icons'>
-                    <ul className="nav-list">
-                        <li><div onClick={()=>{alert('profile')}}><FaRegUserCircle size={35} /></div>
 
-                        </li>
-                        <li><div onClick={()=>{alert('clicked')}}><FiSettings size ={35} /></div>
-
-                        </li>
-                        <li><div onClick={()=>{alert('clicked')}}><BsFillChatDotsFill size ={35}/></div>
-
-                        </li>
-                                
-                        <li><div onClick={()=>{alert('clicked')}}><MdNotifications size ={35} /></div></li>
-                    </ul>
-                </div>
-            </nav>
 
     <form onSubmit={() => writePost(posts.length + 1, description,fullDescription ,picture, title)}>
         <div>
@@ -112,7 +88,7 @@ function AddPosts(props) {
           <input type="submit" value="Submit" />
         </div>
     </form>
-
+ 
             <footer className="footer">
                 <p className="text-footer">
                     Copyright ©-All rights are reserved

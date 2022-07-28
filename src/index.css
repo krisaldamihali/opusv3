@@ -33,6 +33,8 @@
   display: flex;
   justify-content: flex;
   align-items: center;
+  margin-right:800px;
+
 }
 
 .icons {
@@ -158,16 +160,12 @@ background-color: #000;
 }
 .wrapper {
   display: grid;
-
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  grid:auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin-bottom: 50;
-  grid-template-areas: 'myArea myArea ';
-  flex-wrap: wrap;
-
+  grid-auto-rows: minmax(100px, auto);
 }
+
+
 
 
 

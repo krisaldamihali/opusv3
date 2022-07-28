@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react'
 import { getDatabase, ref, onValue, set } from "firebase/database";
 import { app } from './firebase_config.js';
 import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
-import AddPosts from  "./addPost.js"
+import AddPosts from  "./addPost.js";
 
 
 function HomePg(props) {
@@ -54,65 +54,14 @@ function HomePg(props) {
           title:title
         });
       }
+      useEffect(() => {
+        readPosts()
+      }, [])
 
     return (
         <div>
-            <nav className="navbar background">
-                <div className="logo">
-                    <img src={hands}/>
-                </div>
-                <div className="rightNav">
-                    <input type="text" name="search" id="search" />
-                    <button className="btn btn-sm">Search</button>
-                </div>
-                <div className='icons'>
-                    <ul className="nav-list">
-                        <li><div onClick={()=>{alert('profile')}}><FaRegUserCircle size={35} /></div>
-
-                        </li>
-                        <li><div onClick={()=>{alert('clicked')}}><FiSettings size ={35} /></div>
-
-                        </li>
-                        <li><div onClick={()=>{alert('clicked')}}><BsFillChatDotsFill size ={35}/></div>
-
-                        </li>
-                                
-                        <li><div onClick={()=>{alert('clicked')}}><MdNotifications size ={35} /></div></li>
-                    </ul>
-                </div>
-            </nav>
-
-    <form onSubmit={() => writePost(posts.length + 1, description,fullDescription ,picture, title)}>
-        <div>
-          <label>
-            Title:
-            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Description:
-            <input type="text" value={description} onChange={(event) => setDescription(event.target.value)} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Full description:
-            <input type="text" value={fullDescription} onChange={(event) => setFullDescription(event.target.value)} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Image Source:
-            <input type="text" value={picture} onChange={(event) => setPicture(event.target.value)} />
-          </label>
-        </div>
-        <div>
-          <input type="submit" value="Submit" />
-        </div>
-    </form>
             <div className = "wrapper">
-
+              
             {posts.map(
                 post => (
                         <section className="section">
