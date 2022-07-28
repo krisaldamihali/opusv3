@@ -9,6 +9,7 @@ import AddPosts from './addPost';
 import hands from "./hands.png"
 
 import HomePg from "./home.js"
+import Profile from "./Profile.js"
 
 
 
@@ -45,3 +46,6 @@ function App() {
 }
 
 export default App;
+
+
+
