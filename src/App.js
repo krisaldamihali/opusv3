@@ -1,14 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import "./Profile.css"
+
 import { BrowserRouter, Link, Routes, Route,  } from 'react-router-dom';
 import {FaRegUserCircle} from "react-icons/fa";
 import {FiSettings} from "react-icons/fi";
 import {BsFillChatDotsFill} from "react-icons/bs";
 import {MdNotifications} from "react-icons/md"
+import {MdFeed} from "react-icons/md"
 import AddPosts from './addPost';
 import hands from "./hands.png"
 
 import HomePg from "./home.js"
+import Profile from "./Profile.js"
+
 import Profile from "./Profile.js"
 
 
@@ -18,7 +23,7 @@ function App() {
   
   <BrowserRouter>
     <nav className= "navbar background">
-      <div >
+      <div  >
                 <div className="logo">
                     <img src={hands}/>
                 </div>
@@ -28,7 +33,7 @@ function App() {
                 </div>
       </div>
     <div className= "navi" >
-    <Link to = "/"><div><FaRegUserCircle size={35} /></div></Link>
+    <Link to = "/Profile"><div><FaRegUserCircle size={35} /></div></Link>
     <Link to = "/"><div><FiSettings size ={35}/></div></Link>
   
     <Link to = "/addPost"><div><BsFillChatDotsFill size ={35}/></div></Link>
@@ -39,6 +44,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePg />}></Route>
       <Route path="addPost/" element = {<AddPosts/>}/>
+      <Route path="Profile/" element = {<Profile/>}/>
     </Routes>
   </BrowserRouter>
   

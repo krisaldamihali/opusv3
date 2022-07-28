@@ -56,32 +56,32 @@ function AddPosts(props) {
       }
 
     return (
-        <div>
+        <div className='form'>
 
 
     <form onSubmit={() => writePost(posts.length + 1, description,fullDescription ,picture, title)}>
         <div>
           <label>
             Title:
-            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
+            <input className = "placeholder2" type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
           </label>
         </div>
         <div>
           <label>
             Description:
-            <input type="text" value={description} onChange={(event) => setDescription(event.target.value)} />
+            <input className = "placeholder2" type="text" value={description} onChange={(event) => setDescription(event.target.value)} />
           </label>
         </div>
         <div>
           <label>
             Full description:
-            <input type="text" value={fullDescription} onChange={(event) => setFullDescription(event.target.value)} />
+            <input className='placeholder' type="text" value={fullDescription} onChange={(event) => setFullDescription(event.target.value)} />
           </label>
         </div>
         <div>
           <label>
             Image Source:
-            <input type="text" value={picture} onChange={(event) => setPicture(event.target.value)} />
+            <input className = "placeholder2" type="text" value={picture} onChange={(event) => setPicture(event.target.value)} />
           </label>
         </div>
         <div>

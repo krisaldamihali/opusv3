@@ -8,9 +8,22 @@
 
 .postDiv{
 
-    width:50%;
+    width:150%;
+
     text-align:center;
     align-items: center;
+    background-color: #c8b4dc;
+    
+
+
+}
+.postDiv2{
+
+    width:50%;
+    height:80%;
+    text-align:center;
+    align-items: center;
+
 }
 
 .header {

@@ -12,8 +12,10 @@ import { FaRegClosedCaptioning } from 'react-icons/fa';
 
 const Post = (props)=>{
     const [showDescription, setShowDescription] = useState(false)
+    const [display, setDisplay] = useState("postDiv")
     const showText=()=>{
         setShowDescription(true)
+        setDisplay("postDiv2")
 
     }
     const removeText= () =>{
@@ -21,13 +23,14 @@ const Post = (props)=>{
     }
 
     return(
-            <div className='postDiv'>
+            <div className={display}>
+                <img id ="photo" className ="picture" src={props.pic}/> 
                 <h1 className= "header">{props.anouncement}</h1>
-                <img className ="picture" src={props.pic}/> <p className = 'text small'> {props.description}</p>
+                <p className = 'text small'> {props.description}</p>
                 <button onClick={showText}>{props.input}</button>
                 {
                     showDescription && ( 
-                        <div>
+                        <div >
 
                             <p> {props.fullDescription} </p>
                             <button onClick={removeText}>

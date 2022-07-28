@@ -21,6 +21,7 @@
 .footer {
   height: 100%;
   background-color: #000;
+  margin-top: 1200px;
 }
 
 .nav-list {
@@ -118,6 +119,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 .text-small {
   font-size: 18px;
+
 }
 
 .btn {
@@ -163,6 +165,26 @@ background-color: #000;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+}
+
+.form {
+  align-items: center;
+  margin: 70px;
+  background-color: #c9a3d6;
+  justify-content: center;
+  padding: 70px;
+  border-radius: 50px;
+}
+
+.placeholder{
+  font-size: 30px;
+  line-height: 3;
+  margin:5px;
+  border-radius: 5px;
+}
+.placeholder2{
+
+  border-radius: 7px;
 }
 
 
