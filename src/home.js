@@ -12,7 +12,7 @@ import { getDatabase, ref, onValue, set } from "firebase/database";
 import { app } from './firebase_config.js';
 import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import AddPosts from  "./addPost.js";
-
+import './styles.css'
 
 function HomePg(props) {
 

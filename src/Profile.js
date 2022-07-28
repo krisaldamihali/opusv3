@@ -13,33 +13,9 @@ function Profile(props) {
 
     return (
         <div>
-            <nav class="navbar background">
-                {/* <div>
-                    <BrowserRouter>
-                    <button className='back'>
-                        Back
-                    </button>
-                    </BrowserRouter>
-               </div> */}
-               <div class="logo">
-                    <img src={hands}/>
-                </div>
-                <div className="rightNav">
-                    <input type="text" name="search" id="search" />
-                    <button class="btn btn-sm">Search</button>
-                </div>
-                <div className='icons'>
-                    <ul class="nav-list">
-                        <li><div onClick={()=>{alert('profile')}}><FaRegUserCircle size={35} /></div></li>
-                        <li><div onClick={()=>{alert('clicked')}}><FiSettings size ={35} /></div></li>
-                        <li><div onClick={()=>{alert('clicked')}}><BsFillChatDotsFill size ={35}/></div></li>
-                        <li><div onClick={()=>{alert('clicked')}}><MdNotifications size ={35} /></div></li>
-                    </ul>
-                </div>
-               
-            </nav>
+ 
             
-            <div className='wrapper'>
+            <div className='profile'>
                 
                 <div >
                     <div>

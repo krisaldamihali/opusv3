@@ -17,15 +17,14 @@ html, body, main {
   }
   
   header {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+
     background-color: green;
   }
   
   section {
     display: flex;
     flex: 1;
+    background-color: rgb(183, 212, 237);
   }
   
   section div {

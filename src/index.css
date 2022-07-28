@@ -22,6 +22,7 @@
   height: 100%;
   background-color: #000;
   margin-top: 1200px;
+
 }
 
 .nav-list {
@@ -165,6 +166,7 @@ background-color: #000;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+
 }
 
 .form {
@@ -177,16 +179,20 @@ background-color: #000;
 }
 
 .placeholder{
-  font-size: 30px;
+  font-size: 80px;
   line-height: 3;
   margin:5px;
   border-radius: 5px;
 }
 .placeholder2{
-
+  font-size: 50px;
   border-radius: 7px;
 }
 
+.rightNav{
+  display: flex;
+  align-items: flex-start;
+}
 
 
 

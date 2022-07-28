@@ -10,7 +10,6 @@ import Post from "./post.js"
 import { useState, useEffect } from 'react'
 import { getDatabase, ref, onValue, set } from "firebase/database";
 import { app } from './firebase_config.js';
-// import { BrowserRouter, Link, Routes, Route } from 'react-router-dom';
 import HomePg from "./home.js"
 
 
@@ -61,31 +60,31 @@ function AddPosts(props) {
 
     <form onSubmit={() => writePost(posts.length + 1, description,fullDescription ,picture, title)}>
         <div>
-          <label>
+          <label className='text1'>
             Title:
             <input className = "placeholder2" type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
           </label>
         </div>
         <div>
-          <label>
+          <label className='text1'>
             Description:
             <input className = "placeholder2" type="text" value={description} onChange={(event) => setDescription(event.target.value)} />
           </label>
         </div>
         <div>
-          <label>
+          <label className='text1'>
             Full description:
             <input className='placeholder' type="text" value={fullDescription} onChange={(event) => setFullDescription(event.target.value)} />
           </label>
         </div>
         <div>
-          <label>
+          <label className='text1'>
             Image Source:
             <input className = "placeholder2" type="text" value={picture} onChange={(event) => setPicture(event.target.value)} />
           </label>
         </div>
         <div>
-          <input type="submit" value="Submit" />
+          <input className='submit' type="submit" value="Submit" />
         </div>
     </form>
  

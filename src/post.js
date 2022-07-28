@@ -20,20 +20,21 @@ const Post = (props)=>{
     }
     const removeText= () =>{
         setShowDescription(false)
+        setDisplay("postDiv")
     }
 
     return(
             <div className={display}>
                 <img id ="photo" className ="picture" src={props.pic}/> 
-                <h1 className= "header">{props.anouncement}</h1>
-                <p className = 'text small'> {props.description}</p>
-                <button onClick={showText}>{props.input}</button>
+                <h1 className= "postTitle">{props.anouncement}</h1>
+                <p className = 'postDescription'> {props.description}</p>
+                <button className = "postButton" onClick={showText}>{props.input}</button>
                 {
                     showDescription && ( 
                         <div >
 
-                            <p> {props.fullDescription} </p>
-                            <button onClick={removeText}>
+                            <p className="postDescription"> {props.fullDescription} </p>
+                            <button  onClick={removeText}>
                                 <AiFillCloseCircle size={30}/>
                             </button>
                         </div>

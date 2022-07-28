@@ -158,7 +158,7 @@
     justify-content: center;
     color: black;
   }
-  .wrapper {
+  .profile {
     display: grid;
     
     grid-template-rows: 1;
@@ -167,6 +167,8 @@
     gap: 10px;
     margin-bottom: 50;
     grid-template-areas: 'myArea myArea ';
+    background-color: #90e8d6;
+
   
   }
   .name {
@@ -205,35 +207,40 @@
     color:#fc0707;
     border-radius: 10%;
     margin-top: 30px;
+    margin-bottom:1200px ;
+
     
   
   }
   .h1 {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
     font-size: 100px;
     color:#d4550b;
   
   }
   .h2 {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
     color:#1a0335;
   
   }
   .h3 {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
   
   }
   .back {
-    font-size: 30px;
+    font-size: 20px;
     font-family:ARIAL BLACK;
     color:#1a0335;
     border-radius: 10%;
   }
+  /* *{
+    background-color: black;
+  } */
   
   
