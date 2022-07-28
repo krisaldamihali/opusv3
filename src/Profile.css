@@ -167,7 +167,7 @@
     gap: 10px;
     margin-bottom: 50;
     grid-template-areas: 'myArea myArea ';
-    background-color: #90e8d6;
+    background-color: #e9d9ef;
 
   
   }
@@ -184,7 +184,7 @@
   .button {
     margin-right: 50px;
     font-size: 25px;
-    color:#08705b;
+    color:#540870;
     font-family:Impact;
     border-radius: 10%;
 
@@ -204,7 +204,7 @@
     margin: 0 auto;
     font-size: 50px;
     font-family:ARIAL BLACK;
-    color:#fc0707;
+    color:#4f0962;
     border-radius: 10%;
     margin-top: 30px;
     margin-bottom:1200px ;
@@ -216,7 +216,7 @@
     padding-top: 10px;
     text-align: center;
     font-size: 100px;
-    color:#d4550b;
+    color:#66157f;
   
   }
   .h2 {
